@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+ <head>
+  <title>MoonLight</title>
+   <link rel="stylesheet" type="text/css" href="style.css">
+ </head>
+ <body>
+   <section>
+     <img src="bg.jpg" id="bg">
+     <img src="moon.png" id="moon">
+     <img src="mountain.png" id="mountain">
+     <img src="road.png" id="road">
+     <h2 id="text">MoonLight</h2>
+   </section>
+   <script type="text/javascript">
+     Let bg=document.getElementById("bg");
+     Let moon=document.getElementById("moon");
+     Let mountain=document.getElementById("mountain");
+     Let road=document.getElementById("road");
+     Let text=document.getElementById("text");
+     window.addEventListener('scroll',function(){
+       var value=window.scrollY;
+       bg.style.top= value * 0.5 + 'px';
+       moon.style.left=-value * 0.5 + 'px';
+       mountain.style.top=-value *0.15 + 'px';
+       road.style.top=value * 0.15 + 'px';
+       text.style.top=value * 1 + 'px';
+     })
+   </script>
+  </body>
+</html>
